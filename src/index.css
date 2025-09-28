@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* BalticaC font for card titles */
+@font-face {
+  font-family: 'BalticaC';
+  src: url('./BalticaC.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -14,4 +23,9 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Utility class to use BalticaC for titles */
+.font-baltica {
+  font-family: 'BalticaC', serif;
 }

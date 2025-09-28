@@ -6,6 +6,7 @@ interface AppConfig {
   lastName: string;
   iconPath: string;
   description: string;
+  years?: string;
 }
 
 
@@ -23,13 +24,13 @@ function App() {
     <div className='min-h-screen bg-gray-100 relative'>
       <div className="absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-black to-transparent opacity-50 z-10" data-id="2"></div>
     <div className='relative z-20 pt-24 pb-12 px-4 sm:px-6 lg:px-8'>
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-7xl mx-auto">
       <header className="text-center mb-12" data-id="5"><h1 className="text-4xl font-bold text-gray-900 mb-4" data-id="6">In Memory of Our Fallen Heroes</h1><p className="text-xl text-gray-600" data-id="7">Honoring those who made the ultimate sacrifice for our freedom and security.</p></header>
       <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
-        {appConfig.map(({firstName,iconPath,lastName, description}) => {
+        {appConfig.map(({firstName,iconPath,lastName, description, years}) => {
           const fullName = `${firstName} ${lastName}`;
           return (
-            <Card key={fullName} title={fullName} imgSrc={"/museum-of-memory/" + iconPath} description={description}/>
+            <Card key={fullName} title={fullName} imgSrc={"/museum-of-memory/" + iconPath} description={description} years={years} />
       )})}
       </div>
     </div>
