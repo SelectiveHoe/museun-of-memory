@@ -1,0 +1,47 @@
+{
+    "redirects": [
+        {
+            "source": "/",
+            "destination": "/museum-of-memory",
+            "permanent": false
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/museum-of-memory/static/(.*)",
+            "destination": "/static/$1"
+        },
+        {
+            "source": "/museum-of-memory/manifest.json",
+            "destination": "/manifest.json"
+        },
+        {
+            "source": "/museum-of-memory/favicon.ico",
+            "destination": "/favicon.ico"
+        },
+        {
+            "source": "/museum-of-memory/(logo.*\\.png)",
+            "destination": "/$1"
+        },
+        {
+            "source": "/museum-of-memory/robots.txt",
+            "destination": "/robots.txt"
+        },
+        {
+            "source": "/museum-of-memory/photo/(.*)",
+            "destination": "/photo/$1"
+        },
+        {
+            "source": "/museum-of-memory/config.json",
+            "destination": "/config.json"
+        },
+        {
+            "source": "/museum-of-memory/(.*)",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/museum-of-memory",
+            "destination": "/index.html"
+        }
+    ]
+}
