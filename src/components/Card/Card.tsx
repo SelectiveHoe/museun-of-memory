@@ -1,5 +1,6 @@
 import { FC, memo, useLayoutEffect, useRef, useState } from 'react';
 import { ReactComponent as WingIcon } from '../../angel-wing-icon.svg';
+import WingIconImg from '../../angel-wing-icon.svg';
 
 type CardP = {
   title?: string
@@ -85,14 +86,28 @@ const Card: FC<CardP> = ({
 
           {/* Name with wing icon */}
           <div ref={containerRef} className="relative">
+
+            <img
+              src={WingIconImg}
+              alt=""
+              className="absolute h-10 w-20  md:h-10 md:w-20 pointer-events-none select-none opacity-60"
+              style={{
+                left: iconPos.left,
+                top: iconPos.top,
+                transform: 'translate(-50%, -120%)',
+                filter: 'brightness(0) saturate(100%) invert(80%)',
+                zIndex: 8,
+              }}
+            />
             <WingIcon
               aria-hidden
-              className="absolute h-5 w-8 md:h-6 md:w-10 fill-gray-300 pointer-events-none select-none opacity-60"
+              className="absolute h-5 w-8 md:h-6 md:w-10 fill-gray-300 pointer-events-none select-none"
               style={{
                 left: iconPos.left,
                 top: iconPos.top,
                 transform: 'translate(-50%, -120%)',
                 opacity: iconPos.ready ? 0.6 : 0,
+                zIndex: 9,
               }}
             />
             {!!firstName && (
