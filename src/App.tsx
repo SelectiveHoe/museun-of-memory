@@ -33,6 +33,7 @@ function App() {
       <div className='relative z-20 pt-24 pb-12 px-4 sm:px-6 lg:px-8'>
         <div className="max-w-7xl mx-auto">
           <header className="text-center mb-12" data-id="5">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Віртуальний музей пам’яті</h1>
             <h1 className="text-4xl font-bold text-gray-900 mb-4" data-id="6">Небесні Янголи ВТЕІ ДТЕУ
             </h1>
             <p className="text-xl text-gray-600" data-id="7">В памʼять про загиблих у війні Росії проти України</p>
